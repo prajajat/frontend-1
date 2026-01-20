@@ -20,19 +20,20 @@ function Navbar({setFilterData,data}) {
         setFilterData(newFilterData); 
    }
   return (
-    <label>
+    <div className="bg-white flex flex-col sm: flex-row gap-4 items-center">
       Search:{' '}
       <input
         value={query}
         onChange={(e)=>handleChange(e)}
+        className="bg-blue-100"
       />
-      <select onChange={(e)=>handleTypeChange(e)}>
+      <select onChange={(e)=>handleTypeChange(e)}  className="bg-blue-100">
           <option value="">--</option>
           <option value="electronics">Electronics</option>
           <option value="home">Home</option>
           <option value="fashion">Fashion</option>
       </select>
-    </label>
+    </div>
   );
 }
 

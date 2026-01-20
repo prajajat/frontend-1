@@ -11,7 +11,7 @@ function ProductList({data,setData,setFilterData})
   }
   return(
     <div>
-        <ul>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg: grid-cols-3 gap-6 p-4">
          {
             data.map(
                 (d)=> {

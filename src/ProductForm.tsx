@@ -22,30 +22,30 @@ export default function ProductForm({data,setData,setFilterData}) {
 
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text"
+    <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-xl">
+      <input type="text" className=" border rounded px-3"placeholder="Product name"
         {...register("name", {
           required: "Please enter product name.",
         })}  
       />
-      <input
+      <input  type="text" className="border rounded px-3" placeholder="Category"
         {...register("category", {
           required: "Please enter Category.",
         })}  
       />
-      <input type="number"
+      <input type="number" className="border rounded px-3"placeholder="Price"
         {...register("price", {
            required: "Please enter price.",
           min: { value: 0, message: "Minimum price is 0 " },
         })}  
       />
-      <input type="number"
+      <input type="number"className="border rounded px-3"placeholder="Stock"
         {...register("stock", {
            required: "Please enter stock.",
           min: { value: 0, message: "Minimum stock is 0 " },
         })}  
       />
-      <input type="submit" />
+      <button type="submit" className="bg-blue-500 text-white">Save Product</button>
     </form>
   )
 }
