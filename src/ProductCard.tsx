@@ -1,16 +1,7 @@
 import type Product from "./ProductClass";
 
-function ProductCard({data})
+function ProductCard({data,handleEdit,handleDelete})
 {
-    
-   const handleEdit =()=>
-   {
-    //comming soon
-   }
-   const handleDelete =()=>
-   {
-        //comming soon
-   }
  return (
    <div>
     <div>
@@ -47,7 +38,7 @@ function ProductCard({data})
         Premium
         </div>}
         <button onClick={()=>handleEdit}>edit</button>
-        <button onClick={()=>handleDelete}>delete</button>
+        <button onClick={()=>handleDelete(data.id)}>delete</button>
    </div>
  )
 }

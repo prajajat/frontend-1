@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import Product from "./ProductClass"
 
-export default function ProductForm({data,setData}) {
+export default function ProductForm({data,setData,setFilterData}) {
   const { register, handleSubmit } = useForm({
                                               shouldUseNativeValidation: true,
                                             })
@@ -15,9 +15,9 @@ export default function ProductForm({data,setData}) {
 
     newData.id=max+1;
     var newStage=[...data,newData] 
-    
-   setData([...data,newData]);
    localStorage.setItem('data',JSON.stringify(newStage));
+   setData(newStage);
+   setFilterData(newStage);
   }
 
 
