@@ -20,7 +20,7 @@ function Navbar({setFilterData,data}) {
         setFilterData(newFilterData); 
    }
   return (
-    <div className="bg-white flex flex-col sm: flex-row gap-4 items-center">
+    <div className="bg-blue-300 flex flex-col sm: flex-row gap-4 items-center w-full">
       Search:{' '}
       <input
         value={query}
